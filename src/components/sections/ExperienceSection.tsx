@@ -57,7 +57,7 @@ const workExperience = [
 
 const ExperienceSection = () => {
   const ref = useRef(null);
-  const isInView = useInView(ref, { once: true, threshold: 0.1 });
+  const isInView = useInView(ref, { once: true });
 
   return (
     <section id="experience" className="py-20 px-4 relative overflow-hidden">

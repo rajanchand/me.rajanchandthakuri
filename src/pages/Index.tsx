@@ -1,13 +1,46 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+
+import { useState } from 'react';
+import { ThemeProvider } from '@/context/ThemeContext';
+import Header from '@/components/Header';
+import Footer from '@/components/Footer';
+import AISearch from '@/components/AISearch';
+import HomeSection from '@/components/sections/HomeSection';
+import SkillsSection from '@/components/sections/SkillsSection';
+import ExperienceSection from '@/components/sections/ExperienceSection';
+import ResumeSection from '@/components/sections/ResumeSection';
+import AboutSection from '@/components/sections/AboutSection';
+import ContactSection from '@/components/sections/ContactSection';
+import WidgetsSection from '@/components/sections/WidgetsSection';
+import GitHubDeploymentGuide from '@/components/sections/GitHubDeploymentGuide';
 
 const Index = () => {
+  const [showSearch, setShowSearch] = useState(true);
+
+  const handleSkip = () => {
+    setShowSearch(false);
+  };
+
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-100">
-      <div className="text-center">
-        <h1 className="text-4xl font-bold mb-4">Welcome to Your Blank App</h1>
-        <p className="text-xl text-gray-600">Start building your amazing project here!</p>
+    <ThemeProvider>
+      {showSearch && <AISearch onSkip={handleSkip} />}
+      
+      <div className="min-h-screen flex flex-col">
+        <Header />
+        
+        <main className="flex-grow">
+          <HomeSection />
+          <SkillsSection />
+          <ExperienceSection />
+          <ResumeSection />
+          <AboutSection />
+          <ContactSection />
+          <WidgetsSection />
+          <GitHubDeploymentGuide />
+        </main>
+        
+        <Footer />
       </div>
-    </div>
+    </ThemeProvider>
   );
 };
 

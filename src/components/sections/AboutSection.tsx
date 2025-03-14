@@ -5,7 +5,7 @@ import { Github, Linkedin, Youtube, MapPin, Calendar, Building } from 'lucide-re
 
 const AboutSection = () => {
   const ref = useRef(null);
-  const isInView = useInView(ref, { once: true, threshold: 0.1 });
+  const isInView = useInView(ref, { once: true });
 
   return (
     <section id="about" className="py-20 px-4 relative overflow-hidden">

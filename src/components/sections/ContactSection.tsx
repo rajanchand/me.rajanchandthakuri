@@ -15,7 +15,7 @@ import {
 
 const ContactSection = () => {
   const ref = useRef(null);
-  const isInView = useInView(ref, { once: true, threshold: 0.1 });
+  const isInView = useInView(ref, { once: true });
   const [formState, setFormState] = useState({
     name: '',
     email: '',
