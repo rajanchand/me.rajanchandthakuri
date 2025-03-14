@@ -1,13 +1,13 @@
 {
   "name": "vite_react_shadcn_ts",
-  "homepage": "https://github.com/rajanchand/me.rajanchandthakuri"
+  "homepage": "https://github.com/rajanchand/me.rajanchandthakuri",
   "private": true,
   "version": "0.0.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d dist"
+    "deploy": "gh-pages -d dist",
     "build": "vite build",
     "build:dev": "vite build --mode development",
     "lint": "eslint .",
